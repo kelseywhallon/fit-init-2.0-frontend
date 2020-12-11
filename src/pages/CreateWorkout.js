@@ -7,14 +7,11 @@ import WorkoutModel from "../models/workouts"
 const CreateWorkout = props => {
     // display exercises from API
     const [exercises, setExercises] = useState([])
-
     const [value, setValue] = useState([])
     const [exerciseReps, setExerciseReps] = useState()
-
-    //create new workout in db
-    // const [workout, setWorkout] = useState({})
     const [exerciseName, setExerciseName] = useState('')
-    // const [exerciseCategory, setExerciseCategory] = useState('')
+
+    const [selectionArray, setSelectionArray] = useState([])
 
     const fetchExercises = () => {
         ExerciseApi.getExercises().then(data => {
@@ -31,35 +28,32 @@ const CreateWorkout = props => {
 
     const handleExerciseSelection = e => {
         e.preventDefault()
-        const value = []
-        value.push(e.currentTarget.value)
+        console.log("before: ", selectionArray)
+        selectionArray.push(e.currentTarget.value)
         console.log(e.currentTarget.value)
-        setValue(value)
+        console.log("after", selectionArray)
+        // setValue(valueArray)
     }
-
 
     useEffect(() => {
         fetchExercises();
     }, []);
 
-
     const handleCreate = e => {
         e.preventDefault()
+        console.log(selectionArray)
         WorkoutModel.create({
-            exerciseName: exerciseName,
-            exerciseReps: exerciseReps
+            exerciseName: selectionArray
         }).then(data => {
             console.log("Success! New workout added.", data)
             props.history.push('/')
         })
     }
 
-
-
     return (
         <>
             <h1>Create A New Workout</h1>
-            <form >
+            <form onSubmit={handleCreate}>
                 <select onChange={handleExerciseSelection}>
                     {exercises.map((exercise, index) => {
                         return <option key={index} value={exercise.name} > {exercise.name} </option>
@@ -91,7 +85,7 @@ const CreateWorkout = props => {
                     })}
                 </select>
                 <br />
-                <button>Create!</button>
+                <button type="submit">Create!</button>
             </form>
         </>
     );
