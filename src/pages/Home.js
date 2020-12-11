@@ -1,9 +1,11 @@
 import React from 'react';
 
-const Home = () => {
+const Home = (props) => {
+
+
   return (
     <div>
-      <h1>Welcome to PERN Auth</h1>
+      <h1>Welcome!</h1>
     </div>
   );
 }

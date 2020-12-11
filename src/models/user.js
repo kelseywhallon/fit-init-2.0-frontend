@@ -1,4 +1,4 @@
-const REACT_APP_API_URL = "http://localhost:4000/api/v1"
+import REACT_APP_API_URL from "../config/urls";
 
 export default class UserModel {
   static create(data) {
@@ -30,4 +30,27 @@ export default class UserModel {
       credentials: 'include'
     })
   }
+
+
+  static show = userId => {
+    return fetch(`${REACT_APP_API_URL}/users/${userId}`, {
+      method: "GET"
+    }).then(res => res.json());
+  };
+
+  static update = user => {
+    return fetch(`${REACT_APP_API_URL}/users/${user.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(user)
+    }).then(res => res.json());
+  };
+
+  static destroy = user => {
+    return fetch(`${REACT_APP_API_URL}/users/${user.id}`, {
+      method: "DELETE"
+    }).then(res => res.json());
+  };
 }
