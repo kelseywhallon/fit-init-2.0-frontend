@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import CreateWorkout from './pages/CreateWorkout'
 import Routes from './config/Routes'
 import './App.css'
 import UserModel from './models/user'
@@ -43,7 +42,7 @@ function App() {
         currentUser={currentUser}
         firstName={ firstName }
         isInstructor={ isInstructor }
-        logout={logout}
+        logout={ logout }
       />
       <Routes
         currentUser={currentUser}

@@ -8,10 +8,4 @@ export default class ExerciseApi {
         }).then(res => res.json(data));
     }
 
-    // static getExerciseDetails(exerciseId) {
-    //     return fetch(
-    //         `${REACT_APP_API_URL}/exercises/exercises/${exerciseId}`, {
-    //         method: "GET"
-    //     }).then(res => res.json());
-    // }
 }

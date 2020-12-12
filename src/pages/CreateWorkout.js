@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Redirect } from "react-router-dom";
-// import { newWorkout } from "../../../fit-init-2.0-backend/controllers/workouts";
 import ExerciseApi from "../models/exercises";
 import WorkoutModel from "../models/workouts"
 
@@ -10,9 +9,13 @@ const CreateWorkout = props => {
     const [value, setValue] = useState([])
     const [exerciseReps, setExerciseReps] = useState()
     const [exerciseName, setExerciseName] = useState('')
-
     const [selectionArray, setSelectionArray] = useState([])
 
+    const workoutTypes = ['Abs', 'Arms', 'Cardio', 'Full Body', 'Glutes', 'Legs', 'Lower Body', 'Strength', 'Upper Body']
+
+    // const reps = 20
+
+    // populating the selections with exercises from API
     const fetchExercises = () => {
         ExerciseApi.getExercises().then(data => {
             const exercises = []
@@ -25,66 +28,92 @@ const CreateWorkout = props => {
             setExercises(exercises)
         })
     }
-
+    // setting the state for the exercise selected
     const handleExerciseSelection = e => {
         e.preventDefault()
-        console.log("before: ", selectionArray)
         selectionArray.push(e.currentTarget.value)
-        console.log(e.currentTarget.value)
-        console.log("after", selectionArray)
-        // setValue(valueArray)
+        console.log(selectionArray)
     }
+
+    //loop through the selectionArray of exercises to post to ExerciseModel
+    const addExercises = () => {
+        selectionArray.forEach((exercise, index) => {
+            return exercise
+        }
+        )
+    }
+    
 
     useEffect(() => {
         fetchExercises();
     }, []);
 
+    // create the workout on submission
     const handleCreate = e => {
         e.preventDefault()
         console.log(selectionArray)
-        WorkoutModel.create({
-            exerciseName: selectionArray
-        }).then(data => {
-            console.log("Success! New workout added.", data)
-            props.history.push('/')
-        })
+        // WorkoutModel.create({
+        //     exerciseName: selectionArray
+        // }).then(data => {
+        //     console.log("Success! New workout added.", data)
+        //     props.history.push('/')
+        // })
     }
 
     return (
         <>
             <h1>Create A New Workout</h1>
             <form onSubmit={handleCreate}>
+            <div className="form-group">
+                <label for='workoutType'>Choose The Workout Type:</label> <br />
+
+                <select id='workoutType'>
+                    {workoutTypes.map((type, index) => {
+                        return <option key={index} value={type} > {type} </option>
+                    })}
+                </select>
+            </div>
+
+            <div className="form-group">
+                <label for='exercises' >Exercises: </label> <br />
+
+                <select id='exercises' onChange={handleExerciseSelection}>
+                    {exercises.map((exercise, index) => {
+                        return <option key={index} value={exercise.name} > {exercise.name} </option>
+                    })}
+                </select>
+
                 <select onChange={handleExerciseSelection}>
                     {exercises.map((exercise, index) => {
                         return <option key={index} value={exercise.name} > {exercise.name} </option>
                     })}
                 </select>
+
                 <select onChange={handleExerciseSelection}>
                     {exercises.map((exercise, index) => {
                         return <option key={index} value={exercise.name} > {exercise.name} </option>
                     })}
                 </select>
+
                 <select onChange={handleExerciseSelection}>
                     {exercises.map((exercise, index) => {
                         return <option key={index} value={exercise.name} > {exercise.name} </option>
                     })}
                 </select>
+
                 <select onChange={handleExerciseSelection}>
                     {exercises.map((exercise, index) => {
                         return <option key={index} value={exercise.name} > {exercise.name} </option>
                     })}
                 </select>
+
                 <select onChange={handleExerciseSelection}>
                     {exercises.map((exercise, index) => {
                         return <option key={index} value={exercise.name} > {exercise.name} </option>
                     })}
                 </select>
-                <select onChange={handleExerciseSelection}>
-                    {exercises.map((exercise, index) => {
-                        return <option key={index} value={exercise.name} > {exercise.name} </option>
-                    })}
-                </select>
-                <br />
+            </div>
+
                 <button type="submit">Create!</button>
             </form>
         </>
