@@ -1,6 +1,6 @@
 import REACT_APP_API_URL from "../config/urls";
 
-export default class ExerciseModel {
+export default class WorkoutExercise {
     //post to exercise model
     static createExercise(data) {
         return fetch(`${REACT_APP_API_URL}/workoutexercise`, {

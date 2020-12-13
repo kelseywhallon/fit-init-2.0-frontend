@@ -22,7 +22,9 @@ const Profile = props => {
     });
   };
 
-  useEffect(fetchUser, [])
+  useEffect(() => {
+    fetchUser();
+  }, [])
 
   const handleFirstName = e => {
     setFirstName(e.target.value);

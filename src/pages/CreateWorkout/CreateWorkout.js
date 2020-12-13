@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Redirect } from "react-router-dom";
-import ExerciseApi from "../models/exercises";
-import WorkoutModel from "../models/workouts"
+import ExerciseApi from "../../models/exercises";
+import WorkoutModel from "../../models/workouts";
 
 const CreateWorkout = props => {
     // display exercises from API
@@ -22,8 +22,8 @@ const CreateWorkout = props => {
             console.log(data)
             data.map((item, index) => (
                 // console.log(item),
-                exercises.push(item)
-                // console.log(exercises)
+                exercises.push(item),
+                console.log(exercises)
             ))
             setExercises(exercises)
         })

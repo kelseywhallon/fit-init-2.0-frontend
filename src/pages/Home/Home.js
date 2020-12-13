@@ -10,6 +10,9 @@ const Home = (props) => {
       {props.currentUser ? (
     <div>
         <h1>Welcome Home!</h1>
+        <button type="submit">
+          <Link to={'/workouts'} path="/workouts" />
+        </button>
     </div>
       ) : (
         <div>

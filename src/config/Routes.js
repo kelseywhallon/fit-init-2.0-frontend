@@ -5,7 +5,8 @@ import Home from '../pages/Home/Home'
 import Register from '../pages/Register'
 import Login from '../pages/Login'
 import Profile from '../pages/Profile/Profile'
-import CreateWorkout from '../pages/CreateWorkout'
+import Workouts from '../pages/Workouts/Workouts'
+import CreateWorkout from '../pages/CreateWorkout/CreateWorkout'
 
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
@@ -58,6 +59,11 @@ const Routes = (props) => (
     <PrivateRoute 
       path='/createworkout' 
       component={ CreateWorkout } 
+      currentUser={ props.currentUser } 
+    />
+    <PrivateRoute 
+      path='/workouts' 
+      component={ Workouts } 
       currentUser={ props.currentUser } 
     />
   </Switch>
