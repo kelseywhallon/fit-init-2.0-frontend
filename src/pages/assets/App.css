@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+  background:url('https://static.wixstatic.com/media/2b2c51_9c7e78bed287422a889c53846da4e38e~mv2.jpg/v1/fill/w_1500,h_1000,al_c/2b2c51_9c7e78bed287422a889c53846da4e38e~mv2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height:100vh;
+  width:100vw;
+  padding:0;
+  color: white;
+}
+

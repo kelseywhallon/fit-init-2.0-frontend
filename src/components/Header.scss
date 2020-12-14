@@ -1,8 +1,12 @@
+* {
+  box-sizing: border-box;
+}
 header {
-  background-color: slategrey;
+  background-color: rgb(81, 127, 173);
   text-align: left;
   padding: 20px 10px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
 
   a {
@@ -14,8 +18,10 @@ header {
     }
   }
 
-  ul {
+  .loggedInNav {
     display: flex;
+    flex-direction: row;
+    // justify-content: space-between;
     margin: 0;
     padding: 0;
 

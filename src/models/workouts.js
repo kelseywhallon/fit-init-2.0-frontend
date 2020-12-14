@@ -11,7 +11,7 @@ export default class WorkoutModel {
         }).then(res => res.json())
     }
 
-    static showAllWorkouts = () => {
+    static findAllWorkouts = () => {
         return fetch(`${REACT_APP_API_URL}/workouts`).then(res => res.json());
     };
     

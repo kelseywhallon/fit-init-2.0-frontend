@@ -8,15 +8,18 @@ const Header = (props) => {
 
   const loggedIn = (
     <>
-    <div>
-        <Link to={"/"}>Home</Link>
-        <Link to={"/profile"}>My Profile</Link>
-        <Link to={'/createworkout'}>Create Workout</Link>
+    <nav className="loggedInNav">
+        <ul>
+
+          <li> <Link to={"/"}>Home</Link> </li>
+          <li> <Link to={"/profile"}>My Profile</Link> </li>
+          <li> <Link to={'/createworkout'}>Create Workout</Link> </li>
+          <li> <a href="/logout" onClick={props.logout}>
+            Log Out
+          </a> </li>
+        </ul>
+    </nav>
         <h1>KBARRE FITNESS</h1>
-        <a href="/logout" onClick={props.logout}>
-          Log Out
-        </a>
-    </div>
     </>
   );
 

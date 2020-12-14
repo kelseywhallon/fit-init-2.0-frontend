@@ -10,6 +10,8 @@ const CreateWorkout = props => {
     const [exerciseReps, setExerciseReps] = useState()
     const [exerciseName, setExerciseName] = useState('')
     const [selectionArray, setSelectionArray] = useState([])
+    const [workoutType, setWorkoutType] = useState('')
+    const [workoutName, setWorkoutName] = useState('')
 
     const workoutTypes = ['Abs', 'Arms', 'Cardio', 'Full Body', 'Glutes', 'Legs', 'Lower Body', 'Strength', 'Upper Body']
 
@@ -39,8 +41,7 @@ const CreateWorkout = props => {
     const addExercises = () => {
         selectionArray.forEach((exercise, index) => {
             return exercise
-        }
-        )
+        })
     }
     
 
@@ -48,21 +49,32 @@ const CreateWorkout = props => {
         fetchExercises();
     }, []);
 
+    // handle the workout type selection
+    const handleWorkoutType = e => {
+        e.preventDefault()
+        setWorkoutType(e.target.value)
+
+    }
+    // handle the name of the workout input
+
+
     // create the workout on submission
     const handleCreate = e => {
         e.preventDefault()
-        console.log(selectionArray)
-        // WorkoutModel.create({
-        //     exerciseName: selectionArray
-        // }).then(data => {
-        //     console.log("Success! New workout added.", data)
-        //     props.history.push('/')
-        // })
+            WorkoutModel.create({
+                workoutType: workoutType,
+                workoutName: workoutName,
+            }).then(data => {
+                console.log("Success! New workout added.", data)
+                props.history.push('/')
+        })
     }
 
     return (
         <>
             <h1>Create A New Workout</h1>
+
+            
             <form onSubmit={handleCreate}>
             <div className="form-group">
                 <label for='workoutType'>Choose The Workout Type:</label> <br />
@@ -73,6 +85,18 @@ const CreateWorkout = props => {
                     })}
                 </select>
             </div>
+
+        <div className="form-group">
+            <label htmlFor="workoutName">Workout Name: </label>
+            <input 
+                onChange={ setWorkoutName } 
+                value={ workoutName } 
+                type="text" 
+                id="workoutName" 
+                name="workoutName" 
+                required  
+            />
+        </div>
 
             <div className="form-group">
                 <label for='exercises' >Exercises: </label> <br />

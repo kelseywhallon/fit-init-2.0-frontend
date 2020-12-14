@@ -11,6 +11,7 @@ const Profile = props => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [isInstructor, setIsInstructor] = useState()
+  const [user, setUser] = useState()
 
   
   const fetchUser = () => {
@@ -81,7 +82,7 @@ const Profile = props => {
   const logout = () => {
     localStorage.removeItem("id");
     UserModel.logout().then(res => {
-      // setUser(null);
+        setUser(null)
     });
   };
 
@@ -93,7 +94,7 @@ const Profile = props => {
     <div>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="name">First Name</label>
+          <label htmlFor="name">First Name: </label>
           <input
             onChange={handleFirstName}
             value={firstName}
@@ -104,7 +105,7 @@ const Profile = props => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="name">Last Name</label>
+          <label htmlFor="name">Last Name: </label>
           <input
             onChange={handleLastName}
             value={ lastName }
@@ -115,7 +116,7 @@ const Profile = props => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="name">Email</label>
+          <label htmlFor="name">Email: </label>
           <input
             onChange={ handleEmail }
             value={ email } 
@@ -127,15 +128,15 @@ const Profile = props => {
         </div>
         
         <div className="form-group">
-          <label>I am an Instructor</label>
+          <label>I am an Instructor: </label>
           <input
             type="checkbox"
             value={isInstructor}
             onChange={handleIsInstructor}
           />
         </div>
-        <button type="submit" onClick={handleUpdate}>Update</button>
-        <button type="submit" onClick={(handleDelete, logout)}>Delete</button>
+        <button type="submit" onClick={ handleUpdate }>Update</button>
+        <button type="submit" onClick={( handleDelete, logout )}>Delete</button>
       </form>
     </div>
   )
