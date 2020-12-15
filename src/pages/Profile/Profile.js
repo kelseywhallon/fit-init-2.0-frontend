@@ -131,8 +131,8 @@ const Profile = props => {
           <label>I am an Instructor: </label>
           <input
             type="checkbox"
-            value={isInstructor}
-            onChange={handleIsInstructor}
+            value={ isInstructor }
+            onChange={ handleIsInstructor }
           />
         </div>
         <button type="submit" onClick={ handleUpdate }>Update</button>

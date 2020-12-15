@@ -1,7 +1,9 @@
 import REACT_APP_API_URL from "../config/urls";
 
 export default class WorkoutModel {
+    
     static newWorkout(data) {
+        console.log(data)
         return fetch(`${REACT_APP_API_URL}/workouts`, {
             method: "POST",
             headers: {
