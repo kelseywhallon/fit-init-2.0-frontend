@@ -6,7 +6,6 @@ import WorkoutModel from "../../models/workouts";
 const CreateWorkout = props => {
     // display exercises from API
     const [exercises, setExercises] = useState([])
-    const [value, setValue] = useState([])
     const [exerciseReps, setExerciseReps] = useState()
     const [exerciseName, setExerciseName] = useState('')
     const [selectionArray, setSelectionArray] = useState([])
@@ -38,11 +37,11 @@ const CreateWorkout = props => {
     }
 
     //loop through the selectionArray of exercises to post to ExerciseModel
-    const addExercises = () => {
-        selectionArray.forEach((exercise, index) => {
-            return exercise
-        })
-    }
+    // const addExercises = () => {
+    //     selectionArray.forEach((exercise, index) => {
+    //         return exercise
+    //     })
+    // }
     
 
     useEffect(() => {
