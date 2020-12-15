@@ -66,18 +66,19 @@ const CreateWorkout = props => {
     // create the workout on submission
     const handleCreateWorkout = e => {
         e.preventDefault()
+        const allExercises = []
+        for (let i = 0; i < selectionArray.length; i++) {
+            const newExercise = {
+                exerciseName: selectionArray[i],
+                exerciseRep: 15
+            }
+            allExercises.push(newExercise)
+        }
         WorkoutModel.newWorkout({
             workoutType: workoutType,
             workoutName: workoutName,
-            // exerciseName: exerciseName,
-            // exerciseRep: exerciseRep
+            exercises: allExercises
         }).then(data => {
-            console.log(selectionArray)
-            for (let i = 0; i < selectionArray.length; i++) {
-                WorkoutModel.newWorkout({
-                    exerciseName: selectionArray[i],
-                })
-            }
             // console.log("Success! New workout added.", data)
         })
         props.history.push('/')
