@@ -14,10 +14,12 @@ export default class WorkoutModel {
     }
 
     static findAllWorkouts = () => {
-        return fetch(`${REACT_APP_API_URL}/workouts`).then(res => res.json());
+        return fetch(`${REACT_APP_API_URL}/workouts`, {
+            method: "GET"
+        }).then(res => res.json());
     };
     
-    static showWorkout = workoutId => {
+    static findWorkout = workoutId => {
         return fetch(`${REACT_APP_API_URL}/workouts/${workoutId}`, {
             method: "GET"
         }).then(res => res.json());

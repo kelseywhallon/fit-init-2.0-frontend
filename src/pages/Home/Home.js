@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import dumbbells from "./assets/dumbbell.png"
-
 
 const Home = (props) => {
 
@@ -10,14 +8,17 @@ const Home = (props) => {
     <>
       {props.currentUser ? (
     <div>
-        <h1>Welcome Home!</h1>
+        {/* <h1>Welcome to KBarre Fitness!</h1> */}
         <button type="submit"> 
           <Link to={'/workouts'} path="/workouts"> My Workouts </Link>
+        </button>
+        <button type="submit"> 
+          <Link to={'/createworkout'} path="/createworkout"> Create a New Workout </Link>
         </button>
     </div>
       ) : (
         <div>
-          {/* <img src={dumbbells}/> */}
+
           <button type="submit" > 
               <Link to={'/login'} path='/login'> 
                 Login

@@ -86,7 +86,7 @@ const CreateWorkout = props => {
 
     return (
         <>
-            <h1>Create A New Workout</h1>
+            {/* <h1>Create A New Workout</h1> */}
             <Form onSubmit={handleCreateWorkout}>
                 <Form.Group>
                     <label htmlFor='workoutType'>Choose The Workout Type:</label> <br />
