@@ -36,10 +36,10 @@ const Login = props => {
 
   return (
     <div>
-      <h4>Login</h4>
+      <h3>Login: </h3>
       <form onSubmit={ handleSubmit }>
         <div className="form-group">
-          <label htmlFor="name">Email</label>
+          <label htmlFor="name">Email: </label>
           <input 
             onChange={ handleEmail } 
             value={ email } 
@@ -51,7 +51,7 @@ const Login = props => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password">Password: </label>
           <input 
             onChange={ handlePassword } 
             value={ password } 
@@ -62,7 +62,7 @@ const Login = props => {
           />
         
         </div>
-        <button type="submit">Login</button>
+        <button type="submit"> Login </button>
       </form>
     </div>
   )

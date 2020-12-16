@@ -14,7 +14,7 @@ header {
   }
 
   img {
-    margin: 0 15px;
+    margin: 0 20px;
     height: 100px;
     width: 100px;
   }
@@ -30,7 +30,6 @@ header {
 
   .loggedInNav {
     display: flex;
-    // flex-direction: row;
     justify-content: space-between;
     margin: 0;
     padding: 0;
@@ -39,6 +38,7 @@ header {
       flex-direction: row;
       list-style-type: none;
       padding: 2px 10px;
+      font-size: 16px;
     }
   }
 }

@@ -1,0 +1,40 @@
+.workoutCardContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.workoutCard {
+    background-color: rgba(100, 120, 147, 0.8);
+    // border: solid 4px rgb(100, 120, 147);
+    border-radius: 15px;
+    padding: 15px;
+    margin: 15px;
+}
+
+.workoutButtonImg {
+    height: 200px;
+    width: 200px;
+}
+.createWorkoutButton {
+    height: 200px;
+    width: 200px;
+}
+
+.homeButtons {
+    padding: 12px;
+    border-radius: 8px;
+    background-color: lightgrey;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+}
+
+.homeButtons.active {
+    color: black;
+}
+
+.homeButtons:hover {
+    background-color: #BEC0C4;
+    color: white;
+}

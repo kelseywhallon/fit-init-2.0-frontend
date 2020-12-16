@@ -32,28 +32,30 @@ const Workouts = props => {
     }, [])
 
     return (
-        <>
-            <h1>My Workouts </h1>
-            {workouts.map((workout, index) => {
-                return (
-                <div className={`${styles.container} ${styles.options}`} key={(Math.random())}> 
-                    <Card className={`${styles.card}`}>
-                        {/* <Card.Img variant="top" src="holder.js/100px180?text=Image cap" /> */}
-                        <Card.Body className={`${styles.cardbody}`}>
-                            <Card.Title className={`${styles.cardtitle}`} key={(Math.random())}>Workout Type: {workout.workoutType}</Card.Title>
-                            <Card.Text className={`${styles.cardtext}`} key={(Math.random())}> Workout Name: {workout.workoutName}</Card.Text>
-                        </Card.Body>
+        <> 
+        {/* <h1 className={`${styles.workoutsPageTitle}`}> Workouts </h1> */}
+            <div className={styles.workoutDiv}>
+                {workouts.map((workout, index) => {
+                    return (
+                    <div className={`${styles.workoutContainer} ${styles.options}`} key={(Math.random())}> 
+                        <Card className={`${styles.workoutCard}`}>
+                            <Card.Body className={`${styles.cardbody}`}>
+                                <Card.Title className={`${styles.workoutCardtitle}`} key={(Math.random())}>{workout.workoutName}</Card.Title>
+                                <Card.Text className={`${styles.workoutCardtext}`} key={(Math.random())}> {workout.workoutType}</Card.Text>
+                                <Card.Text className={`${styles.workoutReps}`} key={(Math.random())} > Reps: 15 <br /> Repeat 4x </Card.Text>
+                            </Card.Body>
 
-                        <ListGroup className={`${styles.listgroup}`} className="list-group-flush">
-                            <ListGroupItem className={`${styles.listitem}`}>{workout.exerciseName}</ListGroupItem>
-                            {workout.exercises.map((exercise, index) => {
-                                return <ListGroupItem key={(Math.random())} value={exercise.exerciseName}>Exercise {index + 1}: {exercise.exerciseName}</ListGroupItem>
-                            })}
-                        </ListGroup>
-                    </Card>
-                </div>
-                )
-            })}
+                            <ListGroup className={`${styles.workoutListgroup}`} className="list-group-flush">
+                                {/* <ListGroupItem className={`${styles.workoutCategory}`}> {workout.exerciseName} </ListGroupItem> */}
+                                {workout.exercises.map((exercise, index) => {
+                                    return <ListGroupItem className={`${styles.workoutCategory}`} key={(Math.random())} value={exercise.exerciseName}>  {exercise.exerciseName}</ListGroupItem>
+                                })}
+                            </ListGroup>
+                        </Card>
+                    </div>
+                    )
+                })}
+            </div>
         </>
     )
 }
