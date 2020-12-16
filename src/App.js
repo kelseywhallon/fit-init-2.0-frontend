@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Routes from './config/Routes'
-import './pages/assets/App.css'
+import './pages/assets/App.scss'
 import UserModel from './models/user'
 
 function App() {
@@ -50,11 +50,6 @@ function App() {
         isInstructor={ isInstructor }
         storeUser={storeUser}
       />
-      {/* <CreateWorkout 
-        currentUser={ currentUser}
-        firstName={ firstName }
-        isInstructor={ isInstructor }
-      /> */}
       <Footer />
     </div>
   );

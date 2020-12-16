@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Redirect } from "react-router-dom";
 import UserModel from "../../models/user";
-// import styles from "./UserProfile.module.scss";
+import styles from "./Profile.module.scss";
+import Card from 'react-bootstrap/Card'
 
 
 const Profile = props => {
-
-  console.log("Profile props: ", props.currentUser)
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -29,7 +28,6 @@ const Profile = props => {
 
   const handleFirstName = e => {
     setFirstName(e.target.value);
-    console.log("inside handelfirstname: " + e);
   };
 
   const handleLastName = e => {
@@ -91,11 +89,13 @@ const Profile = props => {
 }
 
   return (
-    <div>
+    <div className={styles.profileform}>
+    <Card className={`${styles.profilecard}`}> 
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">First Name: </label>
           <input
+            className={styles.forminput}
             onChange={handleFirstName}
             value={firstName}
             type="text"
@@ -107,6 +107,7 @@ const Profile = props => {
         <div className="form-group">
           <label htmlFor="name">Last Name: </label>
           <input
+          className={styles.forminput}
             onChange={handleLastName}
             value={ lastName }
             type="text"
@@ -118,6 +119,7 @@ const Profile = props => {
         <div className="form-group">
           <label htmlFor="name">Email: </label>
           <input
+          className={styles.forminput}
             onChange={ handleEmail }
             value={ email } 
             type="email"
@@ -135,9 +137,10 @@ const Profile = props => {
             onChange={ handleIsInstructor }
           />
         </div>
-        <button type="submit" onClick={ handleUpdate }>Update</button>
-        <button type="submit" onClick={( handleDelete, logout )}>Delete</button>
+        <button className={styles.profilebutton} type="submit" onClick={ handleUpdate }>Update</button>
+        <button className={styles.profilebutton} type="submit" onClick={( handleDelete, logout )}>Delete</button>
       </form>
+    </Card>
     </div>
   )
 }

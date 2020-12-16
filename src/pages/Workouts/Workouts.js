@@ -36,28 +36,25 @@ const Workouts = props => {
             <h1>My Workouts </h1>
             {workouts.map((workout, index) => {
                 return (
-                <div className={`${styles.container} ${styles.options}`}> 
-                <Card className={`${styles.card}`}>
-                    {/* <Card.Img variant="top" src="holder.js/100px180?text=Image cap" /> */}
-                    <Card.Body>
-                        <Card.Title key={(Math.random())}>Workout Type: {workout.workoutType}</Card.Title>
-                        <Card.Text key={(Math.random())}> Workout Name: {workout.workoutName}</Card.Text>
-                    </Card.Body>
+                <div className={`${styles.container} ${styles.options}`} key={(Math.random())}> 
+                    <Card className={`${styles.card}`}>
+                        {/* <Card.Img variant="top" src="holder.js/100px180?text=Image cap" /> */}
+                        <Card.Body className={`${styles.cardbody}`}>
+                            <Card.Title className={`${styles.cardtitle}`} key={(Math.random())}>Workout Type: {workout.workoutType}</Card.Title>
+                            <Card.Text className={`${styles.cardtext}`} key={(Math.random())}> Workout Name: {workout.workoutName}</Card.Text>
+                        </Card.Body>
 
-                    <ListGroup className="list-group-flush">
-                        <ListGroupItem>Exercises: {workout.exerciseName}</ListGroupItem>
-                        {workout.exercises.map((exercise, index) => {
-                            return <ListGroupItem key={(Math.random())} value={exercise.exerciseName}>Exercise {index + 1}: {exercise.exerciseName}</ListGroupItem>
-                        })}
-                        <ListGroupItem>{workout.exercise}</ListGroupItem>
-                    </ListGroup>
-                </Card>
+                        <ListGroup className={`${styles.listgroup}`} className="list-group-flush">
+                            <ListGroupItem className={`${styles.listitem}`}>{workout.exerciseName}</ListGroupItem>
+                            {workout.exercises.map((exercise, index) => {
+                                return <ListGroupItem key={(Math.random())} value={exercise.exerciseName}>Exercise {index + 1}: {exercise.exerciseName}</ListGroupItem>
+                            })}
+                        </ListGroup>
+                    </Card>
                 </div>
                 )
             })}
-
         </>
-
     )
 }
 
