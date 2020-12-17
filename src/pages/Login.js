@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Redirect } from 'react-router-dom'
 import UserModel from '../models/user'
-import styles from './assets/Login.scss'
+import styles from './Home/Home.module.scss'
 
 const Login = props => {
   let [email, setEmail] = useState('')
@@ -37,11 +37,12 @@ const Login = props => {
 
   return (
     <div className={styles.loginForm} >
-      <h3>Login: </h3>
+      <h2>Login: </h2>
       <form onSubmit={ handleSubmit }>
         <div className="form-group">
-          <label htmlFor="name">Email: </label>
-          <input 
+          <label className={styles.formLabels} htmlFor="name">Email: </label>
+          <input
+            className={`${styles.LoginRegInputs}`} 
             onChange={ handleEmail } 
             value={ email } 
             type="email" 
@@ -52,8 +53,9 @@ const Login = props => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="password">Password: </label>
+          <label className={styles.formLabels} htmlFor="password">Password: </label>
           <input 
+            className={`${styles.LoginRegInputs}`}
             onChange={ handlePassword } 
             value={ password } 
             type="password" 
@@ -63,7 +65,9 @@ const Login = props => {
           />
         
         </div>
-        <button type="submit"> Login </button>
+        <button 
+          className={`${styles.loginRegButtons}`}
+          type="submit"> Login </button>
       </form>
     </div>
   )

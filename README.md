@@ -62,8 +62,9 @@ I used [this Trello board](https://trello.com/b/YrxQNpLE/fit-init-20) to manage 
 - Adding a dashboard for instructors to be able to view all users that are assigned to them. 
 - Load more option as the DB or workouts continues to grow for clients
 - Allow users to favorite specific workouts 
+- Creating my own workout API
 
 
 ### Credits 
  - Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
- - 
+ 

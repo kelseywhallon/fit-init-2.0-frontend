@@ -33,7 +33,7 @@ const Home = (props) => {
 
           <Button 
             variant="custom"
-            className={`${styles.loginregButton}`} 
+            className={`${styles.loginRegButton}`} 
             type="submit" > 
               <Link to={'/login'} path='/login'> 
                 Login
@@ -41,7 +41,7 @@ const Home = (props) => {
           </Button> 
             <Button 
               variant="custom"
-              className={`${styles.loginregButton}`}
+              className={`${styles.loginRegButton}`}
               type="submit" > 
                 <Link to={'/register'} path='/register'> 
                   Register  

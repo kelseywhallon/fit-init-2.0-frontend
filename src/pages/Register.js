@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import UserModel from '../models/user'
-import styles from './assets/Register.scss'
+import styles from './Home/Home.module.scss'
+// import styles from './assets/Register.scss'
 
 const Register = props => {
   const [firstName, setFirstName] = useState('');
@@ -51,11 +52,12 @@ const Register = props => {
 
   return (
     <div >
-      <h4>Register: </h4>
+      <h2>Register: </h2>
       <form className={`${styles.registerForm}`} onSubmit={ handleSubmit } >
         <div className="form-group">
-          <label htmlFor="name">First Name: </label>
+          <label className={styles.formLabels} htmlFor="name">First Name: </label>
           <input 
+            className={`${styles.LoginRegInputs}`}
             onChange={ handleFirstName } 
             value={ firstName }
             type="text" 
@@ -65,8 +67,9 @@ const Register = props => {
           />
         </div>
         <div className="form-group">
-        <label htmlFor="name">Last Name: </label>
+        <label className={styles.formLabels} htmlFor="name">Last Name: </label>
           <input 
+            className={`${styles.LoginRegInputs}`}
             onChange={ handleLastName } 
             value={ lastName }
             type="text" 
@@ -76,8 +79,9 @@ const Register = props => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="name">Email: </label>
+          <label className={styles.formLabels} htmlFor="name">Email: </label>
           <input 
+            className={`${styles.LoginRegInputs}`}
             onChange={ handleEmail } 
             value={ email } 
             type="email" 
@@ -87,8 +91,9 @@ const Register = props => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="name">Password: </label>
+          <label className={styles.formLabels} htmlFor="name">Password: </label>
           <input 
+            className={`${styles.LoginRegInputs}`}
             onChange={ handlePassword } 
             value={ password } 
             type="password" 
@@ -98,8 +103,9 @@ const Register = props => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="confirm-password">Confirm Password: </label>
+          <label className={styles.formLabels} htmlFor="confirm-password">Confirm Password: </label>
           <input 
+            className={`${styles.LoginRegInputs}`}
             onChange={ handleConfirmPassword } 
             value={ confirmPassword } 
             type="password" 
@@ -109,14 +115,17 @@ const Register = props => {
           />
         </div>
         <div className="form-group"> 
-          <label>I am an Instructor</label>
+          <label className={styles.formLabels} >I am an Instructor</label>
           <input
+            className={`${styles.LoginRegInputs}`}
             type="checkbox"
             value={ isInstructor }
             onChange={ handleIsInstructor }
           />
         </div>
-        <button type="submit">Register </button>
+        <button
+          className={`${styles.loginRegButtons}`}
+          type="submit">Register </button>
       </form>
     </div>
   )
