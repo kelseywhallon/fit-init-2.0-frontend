@@ -60,6 +60,7 @@ I used [this Trello board](https://trello.com/b/YrxQNpLE/fit-init-20) to manage 
 ## Future Development
 - Adding functionality to allow instructors to assign workouts to specific clients/ users. 
 - Adding a dashboard for instructors to be able to view all users that are assigned to them. 
+- Load more option as the DB or workouts continues to grow for clients
 - Allow users to favorite specific workouts 
 
 
