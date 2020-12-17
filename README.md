@@ -55,14 +55,14 @@ I used [this Trello board](https://trello.com/b/YrxQNpLE/fit-init-20) to manage 
 
 
 ## User Stories
--As a user, I want to be able to sign up or sign into an existing account from the website landing page.
--If a user already has an existing account, the user will want to be directed to the workouts homepage.
--As a user, I want to be able to log out of my account
--As a user, I want to be able to delete my account
--As a user on the homepage, I want to be able to select the workout of the day or have the option to view a workout from the archives based on workout category.
--As an instructor (admin), I want to be able to create a new workout
--As a user, I want to be able to select a workout and view the workout details
--As a user, I want to be able to "complete" the workout or add the workout to "favorites"
+- As a user, I want to be able to sign up or sign into an existing account from the website landing page.
+- If a user already has an existing account, the user will want to be directed to the workouts homepage.
+- As a user, I want to be able to log out of my account
+- As a user, I want to be able to delete my account
+- As a user on the homepage, I want to be able to select the workout of the day or have the option to view a workout from the archives based on workout category.
+- As an instructor (admin), I want to be able to create a new workout
+- As a user, I want to be able to select a workout and view the workout details
+- As a user, I want to be able to "complete" the workout or add the workout to "favorites"
 
 ## Code Snippets 
 [Many exercises to many workout associations](https://github.com/kelseywhallon/fit-init-2.0-backend/blob/263f8aba9c1805cd05193c7793f6a3437f7cb00f/controllers/workouts.js#L4-L29)
@@ -90,4 +90,5 @@ sequelize db:seed --seed seeders/20201209195317-users.js
 
 ### Credits 
  - Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+ - Everyone in SEIR921! 
  
