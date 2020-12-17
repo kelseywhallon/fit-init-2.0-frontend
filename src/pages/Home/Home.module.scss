@@ -1,3 +1,5 @@
+@import "../assets/globals";
+
 .workoutCardContainer {
     display: flex;
     justify-content: center;
@@ -5,7 +7,6 @@
 }
 .workoutCard {
     background-color: rgba(100, 120, 147, 0.8);
-    // border: solid 4px rgb(100, 120, 147);
     border-radius: 15px;
     padding: 15px;
     margin: 15px;
@@ -30,7 +31,19 @@
     font-family: 'Playfair Display', serif;
 }
 
-.homeButtons.active {
+.homeButtons.a{
+    color: white;
+}
+
+.loginregButton{
+    margin: 15px 3px;
+    padding: 10px;
+    border-radius: 7px;
+    font-weight: bold;
+    color: white;
+}
+
+a {
     color: black;
 }
 

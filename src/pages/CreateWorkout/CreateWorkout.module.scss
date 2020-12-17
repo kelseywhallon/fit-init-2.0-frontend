@@ -1,0 +1,35 @@
+.createWorkoutDiv {
+    background-color: rgba(100, 120, 147, 0.75);
+    padding: 70px 10px;
+    margin: 50px 80px;
+}
+
+.formLabels{
+    font-size: 20px;
+    // padding: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.createWorkoutName{
+    padding: 4px;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.selectOptions {
+    padding: 3px;
+    margin: 2px;
+    font-size: 14px;
+}
+
+.createWorkoutButton{
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.createWorkoutButton:hover{
+    cursor: pointer;
+    background-color: #BEC0C4;
+}

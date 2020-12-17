@@ -5,6 +5,7 @@ import WorkoutModel from "../../models/workouts";
 import WorkoutExercise from "../../models/exerciseModel"
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import styles from "./CreateWorkout.module.scss";
 
 const CreateWorkout = props => {
     // display exercises from API
@@ -85,22 +86,23 @@ const CreateWorkout = props => {
     }
 
     return (
-        <>
+        <div className={styles.createWorkoutDiv}>
             {/* <h1>Create A New Workout</h1> */}
-            <Form onSubmit={handleCreateWorkout}>
-                <Form.Group>
-                    <label htmlFor='workoutType'>Choose The Workout Type:</label> <br />
-                    <select id='workoutType' onChange={ handleWorkoutType }>
+            <Form className={styles.createWorkoutForm} onSubmit={handleCreateWorkout}>
+                <Form.Group className={styles.createWorkoutCategory}>
+                    <label className={styles.formLabels} htmlFor='workoutType'> Workout Type:</label> <br />
+                    <select className={`${styles.selectOptions}`} id='workoutType' onChange={ handleWorkoutType }>
                         {workoutTypes.map((type, index) => {
                             return <option key={index} value={type} > {type} </option>
                         })}
                     </select>
                 </Form.Group>
                 <br />
-                <Form.Group>
-                    <label htmlFor="workoutName">Workout Name: </label>
+                <Form.Group >
+                    <label className={`${styles.formLabels}`} htmlFor="workoutName">Workout Name: </label>
                     <br />
                     <Form.Control
+                        className={styles.createWorkoutName}
                         size="lg"
                         type="text"
                         onChange={ handleWorkoutName }
@@ -109,9 +111,11 @@ const CreateWorkout = props => {
                 </Form.Group>
                 <br />
                 <Form.Group>
-                    <label htmlFor="workoutName">Choose the Exercises: </label>
+                    <label className={`${styles.formLabels}`} htmlFor="workoutName"> Exercises: </label>
                     <br />
-                    <Form.Control size="lg" as="select" 
+                    <Form.Control 
+                        size="lg" as="select" 
+                        className={`${styles.selectOptions}`}
                         onChange={ handleExerciseSelection } >
                         {exercises.map((exercise, index) => {
                             return <option key={index} value={exercise.name} > {exercise.name} </option>
@@ -125,50 +129,67 @@ const CreateWorkout = props => {
                     )}
                     </Form.Control> */}
                     <br />
-                    <Form.Control size="lg" as="select" onChange={handleExerciseSelection}>
+                    <Form.Control 
+                        size="lg" as="select" 
+                        className={`${styles.selectOptions}`}
+                        onChange={ handleExerciseSelection } >
                         {exercises.map((exercise, index) => {
                             return <option key={index} value={exercise.name} > {exercise.name} </option>
                         })}
                     </Form.Control>
                     <br />
-                    <Form.Control size="lg" as="select" onChange={handleExerciseSelection}>
-                        {exercises.map((exercise, index) => {
-                            return <option key={index} value={exercise.name} > {exercise.name} </option>
-                        })}
+                    <Form.Control 
+                        size="lg" as="select" 
+                        className={`${styles.selectOptions}`}
+                        onChange={ handleExerciseSelection }>
+                            {exercises.map((exercise, index) => {
+                                return <option key={index} value={exercise.name} > {exercise.name} </option>
+                            })}
                     </Form.Control>
                     <br />
-                    <Form.Control size="lg" as="select" onChange={handleExerciseSelection}>
-                        {exercises.map((exercise, index) => {
-                            return <option key={index} value={exercise.name} > {exercise.name} </option>
-                        })}
+                    <Form.Control 
+                        size="lg" as="select" 
+                        className={`${styles.selectOptions}`}
+                        onChange={ handleExerciseSelection }>
+                            {exercises.map((exercise, index) => {
+                                return <option key={index} value={exercise.name} > {exercise.name} </option>
+                            })}
                     </Form.Control>
                     <br />
-                    <Form.Control size="lg" as="select" onChange={handleExerciseSelection}>
-                        {exercises.map((exercise, index) => {
-                            return <option key={index} value={exercise.name} > {exercise.name} </option>
-                        })}
+                    <Form.Control 
+                        size="lg" as="select" 
+                        className={`${styles.selectOptions}`}
+                        onChange={ handleExerciseSelection }>
+                            {exercises.map((exercise, index) => {
+                                return <option key={index} value={exercise.name} > {exercise.name} </option>
+                            })}
                     </Form.Control>
                     <br />
-                    <Form.Control size="lg" as="select" onChange={handleExerciseSelection}>
-                        {exercises.map((exercise, index) => {
-                            return <option key={index} value={exercise.name} > {exercise.name} </option>
-                        })}
+                    <Form.Control 
+                        size="lg" as="select" 
+                        className={`${styles.selectOptions}`}
+                        onChange={handleExerciseSelection}>
+                            {exercises.map((exercise, index) => {
+                                return <option key={index} value={exercise.name} > {exercise.name} </option>
+                            })}
                     </Form.Control>
                     <br />
-                    <Form.Control size="lg" as="select" onChange={handleExerciseSelection}>
-                        {exercises.map((exercise, index) => {
-                            return <option key={index} value={exercise.name} > {exercise.name} </option>
-                        })}
+                    <Form.Control 
+                        size="lg" as="select" 
+                        className={`${styles.selectOptions}`}
+                        onChange={handleExerciseSelection}>
+                            {exercises.map((exercise, index) => {
+                                return <option key={index} value={exercise.name} > {exercise.name} </option>
+                            })}
                     </Form.Control>
                 </Form.Group>
 
                 <br />
-                <Button variant="primary" size="lg" active type="submit">
+                <Button className={`${styles.createWorkoutButton}`} variant="custom" size="lg" active type="submit">
                     Create Workout!
                 </Button>
-                {/* <button type="submit">CREATE WORKOUT!</button> */}
             </Form>
-        </>
+        </div>
     );
 }
 

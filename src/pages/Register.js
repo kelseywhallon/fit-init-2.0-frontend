@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import UserModel from '../models/user'
+import styles from './assets/Register.scss'
 
 const Register = props => {
   const [firstName, setFirstName] = useState('');
@@ -49,11 +50,11 @@ const Register = props => {
   }
 
   return (
-    <div>
-      <h4>Register</h4>
-      <form onSubmit={ handleSubmit }>
+    <div >
+      <h4>Register: </h4>
+      <form className={`${styles.registerForm}`} onSubmit={ handleSubmit } >
         <div className="form-group">
-          <label htmlFor="name">First Name</label>
+          <label htmlFor="name">First Name: </label>
           <input 
             onChange={ handleFirstName } 
             value={ firstName }
@@ -64,7 +65,7 @@ const Register = props => {
           />
         </div>
         <div className="form-group">
-        <label htmlFor="name">Last Name</label>
+        <label htmlFor="name">Last Name: </label>
           <input 
             onChange={ handleLastName } 
             value={ lastName }
@@ -75,7 +76,7 @@ const Register = props => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="name">Email</label>
+          <label htmlFor="name">Email: </label>
           <input 
             onChange={ handleEmail } 
             value={ email } 
@@ -86,7 +87,7 @@ const Register = props => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="name">Password</label>
+          <label htmlFor="name">Password: </label>
           <input 
             onChange={ handlePassword } 
             value={ password } 
@@ -97,7 +98,7 @@ const Register = props => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="confirm-password">Confirm Password</label>
+          <label htmlFor="confirm-password">Confirm Password: </label>
           <input 
             onChange={ handleConfirmPassword } 
             value={ confirmPassword } 
@@ -115,7 +116,7 @@ const Register = props => {
             onChange={ handleIsInstructor }
           />
         </div>
-        <button type="submit">Register</button>
+        <button type="submit">Register </button>
       </form>
     </div>
   )

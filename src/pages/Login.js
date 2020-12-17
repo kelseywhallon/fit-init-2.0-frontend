@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Redirect } from 'react-router-dom'
 import UserModel from '../models/user'
+import styles from './assets/Login.scss'
 
 const Login = props => {
   let [email, setEmail] = useState('')
@@ -35,7 +36,7 @@ const Login = props => {
   if (props.currentUser) return <Redirect to='/' />
 
   return (
-    <div>
+    <div className={styles.loginForm} >
       <h3>Login: </h3>
       <form onSubmit={ handleSubmit }>
         <div className="form-group">

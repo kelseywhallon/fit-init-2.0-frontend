@@ -7,7 +7,6 @@ Enabling instructors to create individual workouts based on their individual cli
 
 ### Technologies Used
 
-## Running Locally
 
 ## React Component Heirarchy 
 
@@ -25,7 +24,6 @@ Enabling instructors to create individual workouts based on their individual cli
             - Form 
         - User Profile
             - Form 
-        - Favorite Workouts
         
 ## Project Planning
 

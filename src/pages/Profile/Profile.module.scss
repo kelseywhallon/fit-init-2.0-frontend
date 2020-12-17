@@ -1,3 +1,4 @@
+@import "../assets/globals.scss";
 
 .profileform {
     display: flex;
@@ -9,7 +10,7 @@
     background-color: rgba(100, 120, 147, 0.8);
     width: 40%;
     padding: 55px 0;
-    margin: 50px 60px;
+    margin: 50px;
     font-size: 20px;
     // font-weight: bold;
 }
@@ -22,13 +23,30 @@
 }
 
 .profilebutton{
-    margin-top: 4px;
-    padding: 7px;
+    margin: 4px 2px;
+    padding: 8px;
+    font-weight: bold;
+
 }
 
-// @media screen and (max-width: $mobile-breakpoint) {
-//     .profileform {
-//      padding: 20px;
-//      font-size: 16px;
-//     }
-// }
+@media screen and (max-width: $mobile-breakpoint) {
+    .profileform {
+        padding: 20px;
+        font-size: 16px;
+        margin: 10px;
+    }
+
+    .profilecard{
+        margin: 10px;
+        width: 70%;
+        font-size: 12px;
+    }
+    .forminput {
+        font-size: 12px;
+        padding: 1px;
+        width: 80%;
+    }
+    .profilebutton{
+        padding: 4px;
+    }
+}
