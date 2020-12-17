@@ -1,9 +1,11 @@
 # Fit Init 2.0
 
-I was inspired to create this app to help fitness instructors create workout plans for their clients. 
+I was inspired to create this app to help fitness instructors create workout plans for their clients. [wger Workout Manager API](https://wger.de/en/software/api)
 
 
 ## How It Works
+
+Once logged in, you will be able to create a new workout with a custom workout type, workout name, and exercises. After creating a new entry, the workout with my available to view on the "My Workouts" page. 
 
 ![Screenshot](images/homepage.png)
 ![Screenshot](images/createworkout.png)
@@ -55,9 +57,12 @@ I used [this Trello board](https://trello.com/b/YrxQNpLE/fit-init-20) to manage 
 
 
 
-
 ## Future Development
+- Adding functionality to allow instructors to assign workouts to specific clients/ users. 
+- Adding a dashboard for instructors to be able to view all users that are assigned to them. 
+- Allow users to favorite specific workouts 
 
 
 ### Credits 
  - Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+ - 
