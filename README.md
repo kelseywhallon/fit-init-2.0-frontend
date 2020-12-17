@@ -5,8 +5,21 @@ Enabling instructors to create individual workouts based on their individual cli
 
 ## How It Works
 
-### Technologies Used
+![Screenshot](images/homepage)
+![Screenshot](images/createworkout)
+![Screenshot](images/workouts)
 
+### Technologies Used
+The front end is done completely with React.js.
+    - React hooks (useState, useEffect)
+    - SCSS Modules
+    - React Bootstrap
+    - Fetch API to handle all external APIs, including calls to the backend and The wger Workout Manager API.
+
+The backend uses Express.js on the Node.js runtime. The database is PostgreSQL, using Sequelize as the ORM.
+    - Many-to-many exercises-workout relationship to create new workouts
+    - Sequelize seeder to facilitate actual loading of data 
+    - `passport` & `bcrypt` Node modules for secure authentication
 
 ## React Component Heirarchy 
 
@@ -31,13 +44,15 @@ I used [this Trello board](https://trello.com/b/YrxQNpLE/fit-init-20) to manage 
 
 ### Entity Relationship Diagram 
 
+![Entity Relationship Diagram](images/Fit-Init_2.0_ERD.png)
 
 
 ### Wireframes
 
-
+![Wireframes](images/Fit-init_2.0.jpeg)
 
 ## Code Snippets 
+
 
 
 
