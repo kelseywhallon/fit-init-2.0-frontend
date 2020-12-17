@@ -1,6 +1,6 @@
 # Fit Init 2.0
 
-Enabling instructors to create individual workouts based on their individual clients' needs.
+I was inspired to create this app to help fitness instructors create workout plans for their clients. 
 
 
 ## How It Works
