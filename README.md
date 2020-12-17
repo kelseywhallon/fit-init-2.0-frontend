@@ -54,7 +54,7 @@ I used [this Trello board](https://trello.com/b/YrxQNpLE/fit-init-20) to manage 
 ![Wireframes](images/fit-init2.png)
 
 ## Code Snippets 
-
+[Many exercises to many workout associations](https://github.com/kelseywhallon/fit-init-2.0-backend/blob/263f8aba9c1805cd05193c7793f6a3437f7cb00f/controllers/workouts.js#L4-L29)
 
 
 ## Future Development
