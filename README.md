@@ -5,9 +5,9 @@ Enabling instructors to create individual workouts based on their individual cli
 
 ## How It Works
 
-![Screenshot](images/homepage)
-![Screenshot](images/createworkout)
-![Screenshot](images/workouts)
+![Screenshot](images/homepage.png)
+![Screenshot](images/createworkout.png)
+![Screenshot](images/workouts.png)
 
 ### Technologies Used
 The front end is done completely with React.js.
