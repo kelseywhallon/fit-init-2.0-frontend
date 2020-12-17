@@ -90,5 +90,17 @@ sequelize db:seed --seed seeders/20201209195317-users.js
 
 ### Credits 
  - Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
- - Everyone in SEIR921! 
+ - EVERYONE IN SEIR 921!
+ - Brock Whitbread-Cole
+ - Michael Petty
+ - James Sinkler
+ - Tess Bishop
+ - Lauren Nguyen
+ - Derek Foster
+ - Ashley Nguyen
+ - Brock Molmen
+ - Jane Cho
+ - Casey Jenkins
+ - Jamie Cabrigas
+ - Lucy Franco
  
