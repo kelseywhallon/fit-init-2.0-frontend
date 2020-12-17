@@ -1,6 +1,6 @@
 # Fit Init 2.0
 
-I was inspired to create this app to help fitness instructors create workout plans for their clients. [wger Workout Manager API](https://wger.de/en/software/api)
+I was inspired to create this app to help fitness instructors create workout plans for their clients using the [wger Workout Manager API](https://wger.de/en/software/api). As a fitness instructor myself, I wanted to build a tool that I could use with my own clients especially during the era of covid when in person training is not always an option.
 
 
 ## How It Works
