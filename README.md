@@ -3,6 +3,9 @@
 I was inspired to create this app to help fitness instructors create workout plans for their clients using the [wger Workout Manager API](https://wger.de/en/software/api). As a fitness instructor myself, I wanted to build a tool that I could use with my own clients especially during the era of covid when in person training is not always an option.
 
 
+Backend is located here:(https://github.com/kelseywhallon/fit-init-2.0-backend)
+
+
 ## How It Works
 
 Once logged in, you will be able to create a new workout with a custom workout type, workout name, and exercises. After creating a new entry, the workout with my available to view on the "My Workouts" page. 
